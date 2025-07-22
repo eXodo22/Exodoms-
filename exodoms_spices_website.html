@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exodoms Spices Exports | Premium Cardamom from Idukki Kerala</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #000000 0%, #333333 50%, #1a1a1a 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+        }
+
+        header.scrolled {
+            background: rgba(0, 0, 0, 0.95);
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-placeholder {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #D4AF37, #FFD700);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .logo-text {
+            font-size: 2rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #D4AF37, #FFD700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 5px 15px;
+            border-radius: 5px;
+            border: 2px solid transparent;
+        }
+
+        .nav-links a:hover {
+            background: rgba(212, 175, 55, 0.2);
+            color: #D4AF37;
+            border-color: #D4AF37;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(0,0,0,0.6)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23000000" width="1200" height="600"/><path fill="%23D4AF37" opacity="0.1" d="M0,300 Q300,100 600,300 T1200,300 V600 H0 Z"/><circle fill="%23FFD700" opacity="0.2" cx="200" cy="150" r="50"/><circle fill="%23D4AF37" opacity="0.15" cx="800" cy="400" r="80"/><circle fill="%23FFD700" opacity="0.1" cx="1000" cy="200" r="60"/></svg>');
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text {
+            text-align: left;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1rem;
+            color: #D4AF37;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-text .tagline {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #FFD700;
+            font-weight: 600;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            line-height: 1.6;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .hero-image {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .cardamom-placeholder {
+            width: 300px;
+            height: 200px;
+            background: linear-gradient(45deg, #D4AF37, #FFD700);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: #000;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.3);
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .cardamom-placeholder::before {
+            content: 'Your Cardamom Image Here';
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8rem;
+            color: rgba(0,0,0,0.7);
+            font-weight: bold;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #D4AF37, #FFD700);
+            color: #000;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+            animation: fadeInUp 1s ease-out 0.8s both;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.6);
+            background: linear-gradient(45deg, #FFD700, #D4AF37);
+        }
+
+        /* Stats Section */
+        .stats {
+            background: linear-gradient(135deg, #f8f8f8, #ffffff);
+            padding: 4rem 0;
+            margin-top: -100px;
+            position: relative;
+            z-index: 3;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border: 2px solid #D4AF37;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #D4AF37, #FFD700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #333;
+            font-weight: 600;
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 0;
+            background: #000;
+            color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            background: linear-gradient(45deg, #D4AF37, #FFD700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(45deg, #D4AF37, #FFD700);
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        .about-text h3 {
+            color: #D4AF37;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-image {
+            height: 400px;
+            background: linear-gradient(45deg, #D4AF37, #FFD700);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: #000;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Products Section */
+        .products {
+            background: linear-gradient(135deg, #f8f8f8, #ffffff);
+            padding: 6rem 0;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 2px solid #D4AF37;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
+        }
+
+        .product-image {
+            height: 200px;
+            background: linear-gradient(45deg, #D4AF37, #FFD700);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #000;
+        }
+
+        .product-content {
+            padding: 1.5rem;
+        }
+
+        .product-title {
+            font-size: 1.3rem;
+            color: #000;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .product-description {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 6rem 0;
+            background: #000;
+            color: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-item {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 15px;
+            background: #1a1a1a;
+            border: 2px solid #D4AF37;
+            transition: all 0.3s ease;
+        }
+
+        .service-item:hover {
+            background: #D4AF37;
+            color: #000;
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #FFD700;
+        }
+
+        .service-item:hover .service-icon {
+            color: #000;
+        }
+
+        .service-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #f8f8f8, #ffffff);
+            color: #333;
+            padding: 6rem 0;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info h3 {
+            color: #D4AF37;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .contact-info p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .contact-form {
+            background: #000;
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px solid #D4AF37;
+        }
+
+        .contact-form h3 {
+            color: #D4AF37;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #D4AF37;
+            border-radius: 8px;
+            background: white;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #FFD700;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: linear-gradient(45deg, #D4AF37, #FFD700);
+            color: #000;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-size: 1.1rem;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 2px solid #D4AF37;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .hero-text {
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text .tagline {
+                font-size: 1.2rem;
+            }
+
+            .cardamom-placeholder {
+                width: 250px;
+                height: 150px;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <div class="logo-container">
+                    <div class="logo-placeholder">E</div>
+                    <div class="logo-text">Exodoms</div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Exodoms Spices Exports</h1>
+                <p class="tagline">Premium Cardamom from the Hills of Idukki</p>
+                <p>Sourced directly from Vandenmedu plantations in Kerala, we export the finest quality cardamom to wholesalers and retailers worldwide. Experience authentic Indian cardamom with exceptional aroma and flavor.</p>
+                <a href="#contact" class="cta-button">Get Quote</a>
+            </div>
+            <div class="hero-image">
+                <div class="cardamom-placeholder">🌿</div>
+                <p style="color: #D4AF37; font-style: italic; margin-top: -1rem;">Fresh from Idukki Hills</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item fade-in">
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">Year Experience</div>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Cardamom Grades</div>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-number">30</div>
+                    <div class="stat-label">KG Minimum Order</div>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-number">100</div>
+                    <div class="stat-label">% Quality Assured</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title fade-in">About Exodoms</h2>
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <h3>Premium Cardamom Exports from Kerala</h3>
+                    <p>Located in the heart of Idukki's spice region in Vandenmedu, Kerala, Exodoms Spices Exports specializes in sourcing and exporting premium quality cardamom to international markets.</p>
+                    
+                    <p>Though we are a year-old company, our commitment to quality and authentic sourcing has quickly established us as a reliable partner for wholesalers and retailers seeking genuine Indian cardamom.</p>
+
+                    <p>We source directly from local plantations in the Idukki hills, ensuring freshness, authenticity, and the distinctive aroma that Kerala cardamom is famous for worldwide.</p>
+
+                    <div style="margin-top: 2rem; padding: 1rem; background: rgba(212, 175, 55, 0.1); border-radius: 10px;">
+                        <strong style="color: #D4AF37;">Our Location:</strong><br>
+                        Vandenmedu, Idukki District<br>
+                        Kerala, India - The Cardamom Capital
+                    </div>
+                </div>
+                <div class="about-image fade-in">
+                    ⛰️
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title fade-in">Our Cardamom Grades</h2>
+            <div class="products-grid">
+                <div class="product-card fade-in">
+                    <div class="product-image">6️⃣</div>
+                    <div class="product-content">
+                        <h3 class="product-title">6mm Grade Cardamom</h3>
+                        <p class="product-description">Small size premium cardamom pods, perfect for ground spice production and culinary use. Excellent aroma and flavor concentration.</p>
+                    </div>
+                </div>
+                <div class="product-card fade-in">
+                    <div class="product-image">7️⃣</div>
+                    <div class="product-content">
+                        <h3 class="product-title">7mm Grade Cardamom</h3>
+                        <p class="product-description">Medium size cardamom pods with balanced oil content. Ideal for both whole spice trade and processing applications.</p>
+                    </div>
+                </div>
+                <div class="product-card fade-in">
+                    <div class="product-image">8️⃣</div>
+                    <div class="product-content">
+                        <h3 class="product-title">8mm Bold Grade Cardamom</h3>
+                        <p class="product-description">Large premium bold cardamom pods with maximum oil content and intense aroma. Perfect for high-end culinary applications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title fade-in">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-item fade-in">
+                    <div class="service-icon">🏬</div>
+                    <h3 class="service-title">Wholesale Supply</h3>
+                    <p>Bulk cardamom supply to wholesalers with competitive pricing and consistent quality from Idukki plantations.</p>
+                </div>
+                <div class="service-item fade-in">
+                    <div class="service-icon">🛒</div>
+                    <h3 class="service-title">Retail Distribution</h3>
+                    <p>Quality packaging and distribution services for retail chains seeking authentic Kerala cardamom.</p>
+                </div>
+                <div class="service-item fade-in">
+                    <div class="service-icon">📦</div>
+                    <h3 class="service-title">Custom Packaging</h3>
+                    <p>Flexible packaging solutions from 30kg minimum orders to custom retail packages as per requirements.</p>
+                </div>
+                <div class="service-item fade-in">
+                    <div class="service-icon">🌿</div>
+                    <h3 class="service-title">Direct Sourcing</h3>
+                    <p>Direct plantation sourcing from Vandenmedu ensures freshness and authentic quality of every batch.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info fade-in">
+                    <h3>Get In Touch</h3>
+                    <p><strong>📍 Address:</strong><br>Vandenmedu, Idukki<br>Kerala, India</p>
+                    <p><strong>📞 Phone:</strong><br>+91 90749 41024<br>+91 85903 64543</p>
+                    <p><strong>✉️ Email:</strong><br>jisst748@gmail.com</p>
+                    
+                    <h3 style="margin-top: 2rem;">Why Choose Exodoms?</h3>
+                    <p>✓ Direct from Idukki plantations</p>
+                    <p>✓ Three premium grades: 6mm, 7mm, 8mm Bold</p>
+                    <p>✓ Minimum order: 30kg</p>
+                    <p>✓ Wholesale and retail supply</p>
+                    <p>✓ Fresh from the cardamom capital of India</p>
+                    <p>✓ Competitive pricing and reliable supply</p>
+                </div>
+                <form class="contact-form fade-in" onsubmit="handleFormSubmit(event)">
+                    <h3>Request Quote</h3>
+                    <div class="form-group">
+                        <input type="text" placeholder="Company/Individual Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Contact Person" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Country/Region" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Quantity Required & Cardamom Grade (6mm/7mm/8mm)" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Exodoms Spices Exports | Premium Cardamom from Idukki, Kerala | Contact: +91 90749 41024</p>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form submission
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const submitBtn = event.target.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.textContent = 'Sending Inquiry...';
+            submitBtn.style.transform = 'scale(0.98)';
+            
+            setTimeout(() => {
+                submitBtn.textContent = 'Inquiry Sent Successfully! ✓';
+                submitBtn.style.background = 'linear-gradient(45deg, #27ae60, #2ecc71)';
+                
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.style.background = 'linear-gradient(45deg, #D4AF37, #FFD700)';
+                    submitBtn.style.transform = 'scale(1)';
+                    event.target.reset();
+                }, 3000);
+            }, 1500);
+        }
+
+        // Mobile menu toggle (for future enhancement)
+        const navLinks = document.querySelector('.nav-links');
+        const burger = document.querySelector('.burger');
+
+        // Add mobile menu functionality here if needed
+    </script>
+</body>
+</html>
