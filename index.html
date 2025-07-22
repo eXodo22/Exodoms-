@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,29 +9,30 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f6fff7;
-      color: #333;
+      background-color: #000;
+      color: #f5f5dc;
     }
     header {
-      background-color: #2e7d32;
-      color: white;
+      background-color: #111;
+      color: gold;
       padding: 20px;
       text-align: center;
     }
     nav {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      background-color: #a5d6a7;
+      background-color: #222;
       padding: 10px 0;
     }
     nav a {
       margin: 0 15px;
       text-decoration: none;
-      color: #1b5e20;
+      color: gold;
       font-weight: bold;
     }
     section {
-      padding: 40px;
+      padding: 40px 20px;
       max-width: 1000px;
       margin: auto;
     }
@@ -38,34 +40,59 @@
       text-align: center;
       background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/92/Cardamom_plants.jpg');
       background-size: cover;
+      background-position: center;
       color: white;
       padding: 100px 20px;
     }
     .hero h1 {
       font-size: 48px;
+      margin: 0;
     }
     .product-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
     .product {
-      border: 1px solid #c8e6c9;
+      border: 1px solid gold;
       padding: 20px;
-      background-color: #e8f5e9;
+      background-color: #1a1a1a;
       border-radius: 10px;
       text-align: center;
     }
     footer {
-      background-color: #2e7d32;
-      color: white;
+      background-color: #111;
+      color: gold;
       text-align: center;
       padding: 20px;
     }
     .contact {
-      background-color: #f1f8e9;
+      background-color: #1a1a1a;
       padding: 30px;
       border-radius: 8px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      color: white;
+    }
+    th, td {
+      border: 1px solid gold;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #333;
+      color: gold;
+    }
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 28px;
+      }
+      nav a {
+        margin: 10px;
+      }
     }
   </style>
 </head>
@@ -109,12 +136,31 @@
         <p>250g, 1kg, and bulk bags available</p>
       </div>
     </div>
+
+    <h3>Price List</h3>
+    <table>
+      <tr>
+        <th>Product</th>
+        <th>Size</th>
+        <th>Price (per kg)</th>
+      </tr>
+      <tr>
+        <td>Green Cardamom</td>
+        <td>5-6 mm</td>
+        <td>₹950</td>
+      </tr>
+      <tr>
+        <td>Premium Cardamom</td>
+        <td>7+ mm</td>
+        <td>₹1200</td>
+      </tr>
+    </table>
   </section>
 
   <section id="contact">
     <h2>Contact Us</h2>
     <div class="contact">
-      <p><strong>Phone / WhatsApp:</strong> +919074941024</p>
+      <p><strong>Phone / WhatsApp:</strong> +91 9074941024</p>
       <p><strong>Email:</strong> info@exodoms.com</p>
       <p><strong>Location:</strong> Kochara, Idukki, Kerala, India</p>
     </div>
