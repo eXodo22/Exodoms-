@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exodoms Spices Exports - Premium Cardamom from Kerala</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #FFD700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #FFD700;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23FFD700" opacity="0.1" width="1200" height="600"/><circle cx="200" cy="150" r="50" fill="%23FFD700" opacity="0.2"/><circle cx="800" cy="400" r="80" fill="%23FFD700" opacity="0.15"/><circle cx="1000" cy="200" r="60" fill="%23FFD700" opacity="0.1"/></svg>');
+            background-size: cover;
+            background-position: center;
+            padding: 8rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: #FFD700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Company Info */
+        .company-info {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: #000;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .info-card {
+            background: rgba(255,255,255,0.9);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .info-card h3 {
+            color: #000;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+        }
+
+        .products h2 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            color: #FFD700;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+            border: 2px solid #FFD700;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+            border-color: #FFA500;
+        }
+
+        .product-card h3 {
+            color: #FFD700;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-card p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Business Types */
+        .business-types {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: #000;
+            padding: 4rem 0;
+        }
+
+        .business-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .business-card {
+            background: rgba(0,0,0,0.8);
+            color: #FFD700;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .business-card:hover {
+            transform: scale(1.05);
+        }
+
+        .business-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+        }
+
+        .contact h2 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            color: #FFD700;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid #FFD700;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #FFD700;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #FFD700;
+            border-radius: 5px;
+            background: rgba(255,255,255,0.9);
+            color: #000;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: #000;
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            color: #FFD700;
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 2px solid #FFD700;
+        }
+
+        /* Hidden pages */
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        .product-details {
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .product-details h2 {
+            color: #FFD700;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .back-btn {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: #000;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .product-specs {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid #FFD700;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .product-specs h3 {
+            color: #FFD700;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .product-specs ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .product-specs li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255,215,0,0.3);
+        }
+
+        .product-specs li:last-child {
+            border-bottom: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <header>
+            <nav class="container">
+                <div class="logo">🌶️ EXODOMS</div>
+                <ul class="nav-links">
+                    <li><a href="#" onclick="showPage('home')">Home</a></li>
+                    <li><a href="#" onclick="showPage('about')">About</a></li>
+                    <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div class="container">
+                <h1>EXODOMS SPICES EXPORTS</h1>
+                <p>Premium Quality Cardamom Direct from Kerala's Idukki District</p>
+                <p style="font-size: 1rem; margin-top: 1rem;">📍 Vandenmedu, Idukki, Kerala | 📱 9074941024 | 8590364543</p>
+            </div>
+        </section>
+
+        <section class="company-info">
+            <div class="container">
+                <h2>Why Choose Exodoms?</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>📍 Prime Location</h3>
+                        <p>Located in Vandenmedu, Idukki - the heart of Kerala's spice region</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>⏰ 1 Year Experience</h3>
+                        <p>Dedicated to providing the finest quality cardamom exports</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>📦 30kg Packaging</h3>
+                        <p>Efficient bulk packaging for wholesale and retail distribution</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products">
+            <div class="container">
+                <h2>Our Premium Cardamom Range</h2>
+                <div class="product-grid">
+                    <div class="product-card" onclick="showPage('cardamom-6mm')">
+                        <h3>6mm Cardamom</h3>
+                        <p>Premium small-sized cardamom pods with intense aroma and flavor</p>
+                        <p style="color: #FFD700; font-weight: bold;">Click to view details →</p>
+                    </div>
+                    <div class="product-card" onclick="showPage('cardamom-7mm')">
+                        <h3>7mm Cardamom</h3>
+                        <p>Medium-sized cardamom pods perfect for commercial use</p>
+                        <p style="color: #FFD700; font-weight: bold;">Click to view details →</p>
+                    </div>
+                    <div class="product-card" onclick="showPage('cardamom-8mm')">
+                        <h3>8mm Bold Cardamom</h3>
+                        <p>Large premium cardamom pods with exceptional quality</p>
+                        <p style="color: #FFD700; font-weight: bold;">Click to view details →</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="business-types">
+            <div class="container">
+                <h2 style="color: #000; margin-bottom: 3rem;">We Serve</h2>
+                <div class="business-grid">
+                    <div class="business-card">
+                        <h3>🏪 Wholesale</h3>
+                        <p>Bulk quantities for distributors and large-scale buyers</p>
+                    </div>
+                    <div class="business-card">
+                        <h3>🛒 Retailers</h3>
+                        <p>Quality products for retail stores and small businesses</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 6mm Cardamom Page -->
+    <div id="cardamom-6mm" class="page">
+        <header>
+            <nav class="container">
+                <div class="logo">🌶️ EXODOMS</div>
+                <ul class="nav-links">
+                    <li><a href="#" onclick="showPage('home')">Home</a></li>
+                    <li><a href="#" onclick="showPage('about')">About</a></li>
+                    <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="product-details">
+            <div class="container">
+                <button class="back-btn" onclick="showPage('home')">← Back to Home</button>
+                <h2>6mm Premium Cardamom</h2>
+                <div class="product-specs">
+                    <h3>Product Specifications</h3>
+                    <ul>
+                        <li><strong>Size:</strong> 6mm</li>
+                        <li><strong>Grade:</strong> Premium Quality</li>
+                        <li><strong>Origin:</strong> Vandenmedu, Idukki, Kerala</li>
+                        <li><strong>Packaging:</strong> 30kg bulk packaging</li>
+                        <li><strong>Moisture Content:</strong> Optimally dried</li>
+                        <li><strong>Aroma:</strong> Intense and fresh</li>
+                        <li><strong>Color:</strong> Natural green</li>
+                        <li><strong>Suitable for:</strong> Wholesale & Retail</li>
+                    </ul>
+                </div>
+                <div style="margin-top: 2rem;">
+                    <button class="submit-btn" onclick="showPage('contact')" style="max-width: 300px;">Get Quote Now</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 7mm Cardamom Page -->
+    <div id="cardamom-7mm" class="page">
+        <header>
+            <nav class="container">
+                <div class="logo">🌶️ EXODOMS</div>
+                <ul class="nav-links">
+                    <li><a href="#" onclick="showPage('home')">Home</a></li>
+                    <li><a href="#" onclick="showPage('about')">About</a></li>
+                    <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="product-details">
+            <div class="container">
+                <button class="back-btn" onclick="showPage('home')">← Back to Home</button>
+                <h2>7mm Premium Cardamom</h2>
+                <div class="product-specs">
+                    <h3>Product Specifications</h3>
+                    <ul>
+                        <li><strong>Size:</strong> 7mm</li>
+                        <li><strong>Grade:</strong> Premium Quality</li>
+                        <li><strong>Origin:</strong> Vandenmedu, Idukki, Kerala</li>
+                        <li><strong>Packaging:</strong> 30kg bulk packaging</li>
+                        <li><strong>Moisture Content:</strong> Optimally dried</li>
+                        <li><strong>Aroma:</strong> Rich and aromatic</li>
+                        <li><strong>Color:</strong> Natural green</li>
+                        <li><strong>Suitable for:</strong> Commercial & Industrial use</li>
+                    </ul>
+                </div>
+                <div style="margin-top: 2rem;">
+                    <button class="submit-btn" onclick="showPage('contact')" style="max-width: 300px;">Get Quote Now</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 8mm Bold Cardamom Page -->
+    <div id="cardamom-8mm" class="page">
+        <header>
+            <nav class="container">
+                <div class="logo">🌶️ EXODOMS</div>
+                <ul class="nav-links">
+                    <li><a href="#" onclick="showPage('home')">Home</a></li>
+                    <li><a href="#" onclick="showPage('about')">About</a></li>
+                    <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="product-details">
+            <div class="container">
+                <button class="back-btn" onclick="showPage('home')">← Back to Home</button>
+                <h2>8mm Bold Premium Cardamom</h2>
+                <div class="product-specs">
+                    <h3>Product Specifications</h3>
+                    <ul>
+                        <li><strong>Size:</strong> 8mm (Bold)</li>
+                        <li><strong>Grade:</strong> Premium Export Quality</li>
+                        <li><strong>Origin:</strong> Vandenmedu, Idukki, Kerala</li>
+                        <li><strong>Packaging:</strong> 30kg bulk packaging</li>
+                        <li><strong>Moisture Content:</strong> Optimally dried</li>
+                        <li><strong>Aroma:</strong> Exceptionally strong</li>
+                        <li><strong>Color:</strong> Natural green</li>
+                        <li><strong>Suitable for:</strong> Premium export markets</li>
+                    </ul>
+                </div>
+                <div style="margin-top: 2rem;">
+                    <button class="submit-btn" onclick="showPage('contact')" style="max-width: 300px;">Get Quote Now</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="page">
+        <header>
+            <nav class="container">
+                <div class="logo">🌶️ EXODOMS</div>
+                <ul class="nav-links">
+                    <li><a href="#" onclick="showPage('home')">Home</a></li>
+                    <li><a href="#" onclick="showPage('about')">About</a></li>
+                    <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div class="container">
+                <h1>About Exodoms Spices</h1>
+                <p>Your trusted partner for premium cardamom exports from Kerala</p>
+            </div>
+        </section>
+
+        <section class="company-info">
+            <div class="container">
+                <h2 style="color: #000;">Our Story</h2>
+                <p style="color: #000; font-size: 1.1rem; max-width: 800px; margin: 2rem auto;">
+                    Located in the spice capital of Vandenmedu, Idukki, Kerala, Exodoms Spices Exports has been committed to delivering the finest quality cardamom to markets worldwide. With one year of dedicated experience in the spice export industry, we understand the nuances of quality, packaging, and timely delivery.
+                </p>
+                <div class="info-grid" style="margin-top: 3rem;">
+                    <div class="info-card">
+                        <h3>🌱 Quality Sourcing</h3>
+                        <p>Direct procurement from the best cardamom farms in Idukki</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>📦 Expert Packaging</h3>
+                        <p>Professional 30kg packaging ensuring freshness and quality</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🚚 Reliable Export</h3>
+                        <p>Timely delivery to wholesale and retail customers</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page">
+        <header>
+            <nav class="container">
+                <div class="logo">🌶️ EXODOMS</div>
+                <ul class="nav-links">
+                    <li><a href="#" onclick="showPage('home')">Home</a></li>
+                    <li><a href="#" onclick="showPage('about')">About</a></li>
+                    <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="contact">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                
+                <div class="info-grid" style="margin-bottom: 3rem;">
+                    <div class="info-card" style="background: rgba(255,255,255,0.1); color: #FFD700; border: 1px solid #FFD700;">
+                        <h3>📞 Phone Numbers</h3>
+                        <p>9074941024<br>8590364543</p>
+                    </div>
+                    <div class="info-card" style="background: rgba(255,255,255,0.1); color: #FFD700; border: 1px solid #FFD700;">
+                        <h3>📧 Email</h3>
+                        <p>jisst748@gmail.com</p>
+                    </div>
+                    <div class="info-card" style="background: rgba(255,255,255,0.1); color: #FFD700; border: 1px solid #FFD700;">
+                        <h3>📍 Location</h3>
+                        <p>Vandenmedu, Idukki<br>Kerala, India</p>
+                    </div>
+                </div>
+
+                <form class="contact-form" onsubmit="submitEnquiry(event)">
+                    <h3 style="color: #FFD700; text-align: center; margin-bottom: 2rem;">Send Enquiry</h3>
+                    
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">Company Name</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="product">Product Interest</label>
+                        <select id="product" name="product">
+                            <option value="">Select Product</option>
+                            <option value="6mm-cardamom">6mm Cardamom</option>
+                            <option value="7mm-cardamom">7mm Cardamom</option>
+                            <option value="8mm-bold-cardamom">8mm Bold Cardamom</option>
+                            <option value="all-products">All Products</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="quantity">Required Quantity</label>
+                        <input type="text" id="quantity" name="quantity" placeholder="e.g., 100kg, 500kg">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="business-type">Business Type</label>
+                        <select id="business-type" name="business-type">
+                            <option value="">Select Type</option>
+                            <option value="wholesale">Wholesale</option>
+                            <option value="retail">Retail</option>
+                            <option value="export">Export</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your requirements..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Enquiry</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Exodoms Spices Exports. All rights reserved. | Premium Cardamom from Kerala, India</p>
+        </div>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        function submitEnquiry(event) {
+            event.preventDefault();
+            
+            // Collect form data
+            const formData = new FormData(event.target);
+            const enquiryData = {};
+            
+            for (let [key, value] of formData.entries()) {
+                enquiryData[key] = value;
+            }
+            
+            // Add timestamp
+            enquiryData.timestamp = new Date().toLocaleString();
+            
+            // Store enquiry (in a real application, this would be sent to a server)
+            let enquiries = JSON.parse(localStorage.getItem('exodoms_enquiries') || '[]');
+            enquiries.push(enquiryData);
+            localStorage.setItem('exodoms_enquiries', JSON.stringify(enquiries));
+            
+            // Show success message
+            alert('Thank you for your enquiry! We will contact you soon.\n\nYour enquiry has been recorded and will be processed within 24 hours.');
+            
+            // Reset form
+            event.target.reset();
+            
+            // Optional: Send email notification (requires backend implementation)
+            console.log('New Enquiry Received:', enquiryData);
+        }
+
+        // Function to view all enquiries (for admin use)
+        function viewEnquiries() {
+            const enquiries = JSON.parse(localStorage.getItem('exodoms_enquiries') || '[]');
+            console.log('All Enquiries:', enquiries);
+            return enquiries;
+        }
+
+        // Add smooth scrolling for better UX
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
